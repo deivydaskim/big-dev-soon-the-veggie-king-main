@@ -1,19 +1,198 @@
-/* This is an example CSS file, feel free to remove/edit it anytime */
-.footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 10px;
-  text-align: center;
+/* Reset */
+* {
+  margin:0;
+  padding: 0;
+  box-sizing:border-box;
 }
 
-.footer a {
-  font-size: 14px;
-  font-weight: bold;
+/* Main colors and smooth scrolling */
+:root {
+  scroll-behavior: smooth;
+
+  --gray900: #212121;
+  --gray300: #E0E0E0;
+  --gray50: #FAFAFA;
+  --green600: #2E7D32;
+  --orange600: #FB8C00;
+  --orange500: #FFA83A;
+}
+
+/* Fonts */
+@font-face {
+  font-family: Raleway-Black;
+  src: url("assets/fonts/Raleway-Black.ttf");
+}
+
+@font-face {
+  font-family: Raleway-Medium;
+  src: url("assets/fonts/Raleway-Medium.ttf");
+}
+
+@font-face {
+  font-family: Raleway-Regular;
+  src: url("assets/fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+  font-family: Raleway-SemiBold;
+  src: url("assets/fonts/Raleway-SemiBold.ttf");
+}
+
+.headline-xl {
+  font-family: Raleway-Black;
+  font-size: 61px;
+  letter-spacing: 1px;
+}
+.headline-l {
+  font-family: Raleway-SemiBold;
+  font-size: 35px;
+  letter-spacing: 0.25px;
+}
+.headline-m {
+  font-family: Raleway-Medium;
+  font-size: 20px;
+  letter-spacing: 0px;
+}
+.headline-xl-m {
+  font-family: Raleway-Black;
+  font-size: 35px;
+  letter-spacing: 0.25px;
+}
+.headline-l-m {
+  font-family: Raleway-SemiBold;
+  font-size: 25px;
+  letter-spacing: 0.25px;
+}
+.body-font {
+  font-family: Raleway-Regular;
+  font-size: 21px;
+  letter-spacing: 1px;
+}
+.body-font2 {
+  font-family: Raleway-Regular;
+  font-size: 16px;
+  letter-spacing: 0px;
+}
+.caption-font {
+  font-family: Raleway-SemiBold;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+}
+.button-font {
+  font-family: Raleway-Medium;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+body {
+  background-color: var(--gray50);
+}
+
+a, a:hover {
+  color: var(--gray900);
   text-decoration: none;
 }
 
-.footer span {
-  font-size: 14px;
+/* Header/Navbar */
+header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  background: var(--gray50);
+  box-shadow: 0px 10px 20px rgba(33, 33, 33, 0.25);
+  z-index: 100;
+  nav {
+    height: 100%;
+    margin: auto;
+    padding: 0 104px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      display: none;
+    } 
+    ul {
+      list-style: none;
+      display: flex;
+      column-gap: 30px;
+    }
+    a {
+      font-family: Raleway-SemiBold;
+      font-size: 17px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Hero/Landing page */
+#hero {
+  height: 100vh;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 104px;
+  width: 100%;
+  .hero-content{
+    z-index: 2;
+    width: 415px;
+    gap: 20px;
+    h1 {
+      width: 502px;
+    }
+    p {
+      padding: 20px 0;
+    }
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      width: 168px;
+      height: 48px;
+      background-color: var(--orange600);
+      border: none;  
+      border-radius: 8px;
+    }
+    button::after{
+      content: url(assets/icons/check-menu-icon.svg);
+      padding-top: 4px;
+    }
+    button:hover {
+      background-color: var(--orange500);
+    }
+  }
+  .hero-slider {
+    width: 480px;
+    z-index: 1;
+    margin-right: 200px;
+    img {
+      width: 480px;
+    }
+  }
+}
+.hero-right-bg {
+  position: absolute;
+  right:0;
+  top: 0;
+  height: 100vh;
+  width: 25%;
+  max-width: 404px;
+  background-color: var(--green600);
+}
+.hero-left-bg {
+  position: absolute;
+  left: 0;
+  bottom: -100px;
+  width: 146px;
+  height: 219px;
+  background-image: url(assets/images/hero-section-food.png);
 }
