@@ -126,7 +126,7 @@ header {
   }
 }
 
-/* Hero/Landing page */
+/* Hero/Landing page section */
 #hero {
   height: 100vh;
   padding-top: 80px;
@@ -195,4 +195,49 @@ header {
   width: 146px;
   height: 219px;
   background-image: url(assets/images/hero-section-food.png);
+}
+/* about us section */
+#aboutus {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.aboutus-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 104px;
+  width: 100%;
+  column-gap: 87px;
+}
+.aboutus-image {
+  position: relative;
+  left: -50px;
+  z-index: 1;
+  img {
+    width: 100%;
+    max-width: 456px;
+    min-width: 357px;
+  }
+}
+.image-bg {
+  position: absolute;
+  left: -150px;
+  height: 646px;
+  width: 646px;
+  max-height: 80vh;
+  max-width: 80vh;
+  background-color: var(--green600);
+  border-radius: 50%;
+}
+.aboutus-content {
+  max-width: 600px;
+  h2 {
+    color: var(--orange600);
+    font-weight: normal;
+  }
+  h3 {
+    padding: 8px 0;
+  }
 }
