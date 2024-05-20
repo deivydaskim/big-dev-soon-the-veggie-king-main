@@ -26,6 +26,14 @@
       opacity: 1;
   }
 }
+@keyframes fadeOutAnimation {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0;
+  }
+}
 /* Fonts */
 @font-face {
   font-family: Raleway-Black;
@@ -526,6 +534,7 @@ footer {
     top: 80px;
     background-color: var(--gray50);
     box-shadow: 10px 10px 10px rgba(33, 33, 33, 0.25);
+    animation: fadeInAnimation ease 0.5s;
     display: none;
     li a{
       display:block;
@@ -636,6 +645,9 @@ footer {
 
   .footer-nav {
     padding: 25px 0;
+  }
+  .copyright {
+    padding: 24px 16px;
   }
 }
 
